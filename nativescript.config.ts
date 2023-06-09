@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.verybody',
+  id: 'inc.dima.verybody',
   appPath: 'app',
   appResourcesPath: 'App_Resources',
   android: {
