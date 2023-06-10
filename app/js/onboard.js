@@ -20,7 +20,7 @@ export default {
       this.$navigateTo(Connection);
     },
     goToLogin() {
-      this.$navigateTo(Connection );
+      this.$navigateTo(Connection);
     }
   },
   computed: {
