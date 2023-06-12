@@ -12,5 +12,5 @@ Vue.registerElement('Carousel', () => require('@nstudio/nativescript-carousel').
 Vue.registerElement('CarouselItem', () => require('@nstudio/nativescript-carousel').CarouselItem);
 
 new Vue({
-  render: (h) => h('frame', [h(ApplicationSettings.hasKey("oldUser") ? Home : Onboard)]),
+  render: (h) => h('frame', [h(ApplicationSettings.hasKey("oldUser") ? Home : Home)]),
 }).$start()

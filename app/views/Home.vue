@@ -3,7 +3,7 @@
     <GridLayout rows="90, *, 90">
       <FlexboxLayout row="0" class="top-menu">
         <Label text.decode="&#xf002;" class="fas h-menu-btn" />
-        <Label text.decode="&#xf007;" class="fas h-menu-btn" />
+        <Label @tap="profile()" text.decode="&#xf007;" class="fas h-menu-btn" />
       </FlexboxLayout>
       <!-- Component Dynamic -->
       <StackLayout row="1">
@@ -15,7 +15,7 @@
           <Label text.decode="&#xf09e;" class="fas h-bottom-btn" />
           <Label text="Feed" class="h-bottom-txt" />
         </StackLayout>
-        <StackLayout class="h-bottom-box" orientation="vertical">
+        <StackLayout class="h-bottom-box" @tap="progress()" orientation="vertical">
           <Label text.decode="&#xf012;" class="fas h-bottom-btn" />
           <Label text="Progress" class="h-bottom-txt" />
         </StackLayout>
@@ -28,7 +28,7 @@
           <Label text.decode="&#xf290;" class="fas h-bottom-btn" />
           <Label text="Store" class="h-bottom-txt" />
         </StackLayout>
-        <StackLayout class="h-bottom-box" orientation="vertical">
+        <StackLayout @tap="menu()" class="h-bottom-box" orientation="vertical">
           <Label text.decode="&#xf03a;" class="fas h-bottom-btn" />
           <Label text="Menu" class="h-bottom-txt" />
         </StackLayout>

@@ -2,13 +2,13 @@
     <StackLayout orientation="vertical">
      <Label text="Feed" class="title" />
 
-     <ScrollView orientation="vertical">
+     <ScrollView orientation="vertical" scrollBarIndicatorVisible="false" >
         <StackLayout orientation="vertical">
 
             <AbsoluteLayout v-for="(item, index) in feedData" :key="index"  class="feed-box">
                 <Image :src="item.img" class="feed-img" />
                 <FlexboxLayout class="feed-txt-box">
-                    <Label :text="item.text" class="feed-txt" />
+                    <Label :text="item.text" textWrap="true" class="feed-txt" />
                 </FlexboxLayout>
                 <Label :text="item.likes" class="feed-like" />
                 <Button v-if="item.isLike" class="like-btn bg-like" />
