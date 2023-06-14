@@ -5,7 +5,7 @@
      <ScrollView orientation="vertical">
         <StackLayout orientation="vertical">
 
-            <AbsoluteLayout v-for="(item, index) in storeData" :key="index"  class="store-box" :background="item.bg" >
+            <AbsoluteLayout  v-for="(item, index) in storeData" :key="index"  class="store-box" :background="item.bg" @tap="goDetail(item)" >
                 <Image :src="item.img" class="store-img" />
                 <Label :text="item.title" class="store-title" />
             </AbsoluteLayout>

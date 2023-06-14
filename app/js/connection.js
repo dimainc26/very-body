@@ -2,6 +2,7 @@ import Login from "../components/Login.vue";
 import Signin from "../components/Signin.vue";
 
 export default {
+  props: ["from"],
   components: {
     Login,
     Signin
@@ -13,7 +14,14 @@ export default {
       bg: "linear-gradient(to left, #746d69, #cccdc6)"
     };
   },
+  mounted(){
+    this.whereTab();
+  },
   methods: {
+    whereTab(){
+      this.from == "signin" ? this.tab = "Signin" : this.tab = "Login";
+    },
+
     changeTabSign() {
       this.tab = "Signin";
       this.isLogin = false;

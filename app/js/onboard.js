@@ -6,6 +6,7 @@ export default {
 
   data() {
     return {
+      selectedPage: 0,
       onboardData: [
         { isSkip: true, title: "Training", content: "Workout plans designed to help you archieve your fitness goals - Whether losing weight or building muscle ", img: "res://a", bg: "linear-gradient(rgb(41, 40, 41), rgb(22, 20, 22))" },
         { isSkip: true, title: "Supplements", content: "Workout plans designed to help you archieve your fitness goals - Whether losing weight or building muscle ", img: "res://b", bg: "linear-gradient(rgb(19, 71, 168), rgb(40, 40, 133))" },
@@ -16,11 +17,17 @@ export default {
     }
   },
   methods: {
+    skip(){
+      this.selectedPage = 4;
+      console.log("okk")
+    },
     goToSignin() {
-      this.$navigateTo(Connection);
+      this.selectedPage = 0;
+      this.$navigateTo(Connection, {props: {from: "signin"}});
     },
     goToLogin() {
-      this.$navigateTo(Connection);
+      this.selectedPage = 0;
+      this.$navigateTo(Connection, {props: {from: "login"}});
     }
   },
   computed: {

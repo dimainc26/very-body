@@ -13,6 +13,7 @@
             indicatorColor="white"
             indicatorOffset="0, -10"
             showIndicator="true"
+            :selectedPage="selectedPage"
           >
             <CarouselItem
               width="100%"
@@ -29,7 +30,7 @@
                   :src="item.img"
                   stretch="aspectFill"
                 />
-                <Label v-if="item.isSkip" text="Skip  >" class="isSkip" />
+                <Label v-if="item.isSkip" text="Skip  >" @tap="skip()" class="isSkip" />
                 <Label :text="item.title" class="o-title" />
                 <Label :text="item.content" class="o-desc" textWrap="true" />
               </AbsoluteLayout>

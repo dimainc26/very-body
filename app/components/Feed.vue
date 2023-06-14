@@ -1,27 +1,27 @@
 <template>
     <StackLayout orientation="vertical">
-     <Label text="Feed" class="title" />
+        <Label text="Feed" class="title" />
 
-     <ScrollView orientation="vertical" scrollBarIndicatorVisible="false" >
-        <StackLayout orientation="vertical">
+        <ScrollView orientation="vertical" scrollBarIndicatorVisible="false">
+            <StackLayout orientation="vertical">
 
-            <AbsoluteLayout v-for="(item, index) in feedData" :key="index"  class="feed-box">
-                <Image :src="item.img" class="feed-img" />
-                <FlexboxLayout class="feed-txt-box">
-                    <Label :text="item.text" textWrap="true" class="feed-txt" />
-                </FlexboxLayout>
-                <Label :text="item.likes" class="feed-like" />
-                <Button v-if="item.isLike" class="like-btn bg-like" />
-                <Button v-else class="like-btn" />
-                <Label :text="`@` + item.author + ` | ` + item.date " class="feed-author" />
-            </AbsoluteLayout>
+                <AbsoluteLayout v-for="(item, index) in feedData" :key="index" class="feed-box">
+                    <Image :src="item.img" class="feed-img" />
+                    <FlexboxLayout class="feed-txt-box">
+                        <Label :text="item.text" textWrap="true" class="feed-txt" />
+                    </FlexboxLayout>
+                    <Label :text="item.likes" class="feed-like" />
+                    <Button v-if="item.isLike" @tap="item.isLike = false;  item.likes -= 1"  class="like-btn bg-like" />
+                    <Button v-else @tap="{ item.isLike = true; item.likes += 1; }" class="like-btn" />
+                    <Label :text="`@` + item.author + ` | ` + item.date" class="feed-author" />
+                </AbsoluteLayout>
 
-        </StackLayout>
-     </ScrollView>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
-  </template>
+</template>
   
-  <script src="../js/feed.js"></script>
+<script src="../js/feed.js"></script>
   
-  <style src="../android.scss" lang="scss"></style>
+<style src="../android.scss" lang="scss"></style>
   

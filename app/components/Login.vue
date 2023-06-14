@@ -13,7 +13,7 @@
     </StackLayout>
     <StackLayout class="c-btns">
       <StackLayout class="c-btns-box" orientation="vertical">
-        <Button class="middle-btn" text="Continue" />
+        <Button class="middle-btn" @tap="goToHome" text="Continue" />
         <StackLayout class="c-or" orientation="horizontal">
           <StackLayout class="c-line" />
           <Label text="or" class="c-or-text" />
